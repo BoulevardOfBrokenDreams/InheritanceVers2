@@ -1,10 +1,11 @@
 package by.gsu.training.final2;
 
-public class Locomotive {
+public class Locomotive extends R_Stock {
     private String type;
     private int maximalSpeed;
 
-    public Locomotive(String type, int maximalSpeed){
+    public Locomotive(int yearOfIssue, String type, int maximalSpeed){
+        super(yearOfIssue);
         this.type = type;
         this.maximalSpeed = maximalSpeed;
     }
@@ -15,5 +16,10 @@ public class Locomotive {
 
     public int getMaximalSpeed() {
         return maximalSpeed;
+    }
+
+    @Override
+    public void print(){
+
     }
 }

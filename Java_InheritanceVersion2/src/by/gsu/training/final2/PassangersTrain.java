@@ -99,4 +99,8 @@ public final class PassangersTrain {
     public void changeWagonNumber(int indexOfWagon, Wagon newWagon){
         rollingStock[indexOfWagon] = newWagon;
     }
+
+    public Locomotive getLocomotive(){
+        return head;
+    }
 }

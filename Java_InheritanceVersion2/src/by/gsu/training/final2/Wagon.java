@@ -6,6 +6,12 @@ public abstract class Wagon extends R_Stock {
     protected int countOfPlaces;
     protected int occupiedPlaces;
 
+    public Wagon( int yearOfIssue, int numberOfWagon, int countOfPlaces){
+        super(yearOfIssue);
+        this.numberOfWagon = numberOfWagon;
+        this.countOfPlaces = countOfPlaces;
+    }
+
     public int getNumberOfWagon(){
         return numberOfWagon;
     }
@@ -30,10 +36,4 @@ public abstract class Wagon extends R_Stock {
 
     public abstract String typeOfComfortable();
     public abstract void printConductors();
-
-    public Wagon( int yearOfIssue, int numberOfWagon, int countOfPlaces){
-        super(yearOfIssue);
-        this.numberOfWagon = numberOfWagon;
-        this.countOfPlaces = countOfPlaces;
-    }
 }

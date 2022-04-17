@@ -10,7 +10,7 @@ public final class CarriageWithSeats extends Wagon{
 
     public String getTypeOfPlaces(){
         return typeOfComfortable();
-    }
+    }  // -получить тип мест для сидения
 
     @Override
     public String typeOfComfortable() {

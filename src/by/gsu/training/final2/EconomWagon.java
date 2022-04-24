@@ -13,7 +13,7 @@ public final class EconomWagon extends Wagon {
 
     @Override
     public String typeOfComfortable() {
-        return ComfortTypes.Плацкарт.toString();
+        return ComfortTypes.Reserved.toString();
     }
 
     @Override
@@ -23,7 +23,7 @@ public final class EconomWagon extends Wagon {
 
     @Override
     public String getType() {
-        return R_StockTypes.Плацкарт.toString();
+        return R_StockTypes.Reserved.toString();
     }
 
     @Override

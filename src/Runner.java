@@ -3,18 +3,18 @@ import by.gsu.training.final2.*;
 public class Runner {
     public static void main(String[] args) {
         //1 создать пассажирский поезд
-        Locomotive head = new Locomotive(1993, LocomotiveTypes.Тепловоз.toString(), 100);
+        Locomotive head = new Locomotive(1993, LocomotiveTypes.Diesel.toString(), 100);
 
         Wagon[] rollinStock = new Wagon[4];
 
         //в конструкторах я не делал специально
         rollinStock[0] = new CompartmentWagon(2010, 1, 36, 6, "Иванова");
         rollinStock[0].addPassengers(30);
-        rollinStock[1] = new CarriageWithSeats(1999, 3, 46, ComfortTypes.СидячийЖесткий.toString());
+        rollinStock[1] = new CarriageWithSeats(1999, 3, 46, ComfortTypes.SITTING_HARD.toString());
         rollinStock[1].addPassengers(12);
         rollinStock[2] = new EconomWagon(2016, 13, 45, "шизова","Кулдыгбедова");
         rollinStock[2].addPassengers(38);
-        rollinStock[3] = new CarriageWithSeats(1956, 23, 96, ComfortTypes.СидячийМягкий.toString());
+        rollinStock[3] = new CarriageWithSeats(1956, 23, 96, ComfortTypes.SITTING_SOFT.toString());
         rollinStock[3].addPassengers(95);
 
         PassangersTrain train = new PassangersTrain(215, head, rollinStock);
@@ -29,7 +29,7 @@ public class Runner {
         //3 узнать общее количество свободных мест во всех вагонах заданнго типа
         result = 0;
         for(int i = 0; i < train.getCountOfWagon(); i++){
-            if(train.getWagonNumber(i).getType().equals(R_StockTypes.Сидячий.toString()) && train.getWagonNumber(i) != null){
+            if(train.getWagonNumber(i).getType().equals(R_StockTypes.Sitting.toString()) && train.getWagonNumber(i) != null){
                 result += train.getWagonNumber(i).getCountOfPlaces() - train.getWagonNumber(i).getCountOfPassengers();
             }
         }
@@ -50,7 +50,7 @@ public class Runner {
 
         for(int i = 0; i < train.getCountOfWagon(); i++){
 
-            if(train.getWagonNumber(i).typeOfComfortable().equals(ComfortTypes.СидячийМягкий.toString())) {
+            if(train.getWagonNumber(i).typeOfComfortable().equals(ComfortTypes.SITTING_SOFT.toString())) {
 
                 Wagon obj = train.getWagonNumber(i);
                 int notOccupiedPlaces = obj.getCountOfPlaces() - obj.getCountOfPassengers();
@@ -108,8 +108,8 @@ public class Runner {
 
         //9 Если у поезда локомотив - тепловоз, заменить его на локомотив - электровоз
         Locomotive oldHead = train.getLocomotive();
-        if(oldHead.getType().equals(LocomotiveTypes.Тепловоз.toString())){
-            train.changeLocomotive(new Locomotive(oldHead.getYEAR_OF_ISSUE(), LocomotiveTypes.Электровоз.toString(), oldHead.getMaximalSpeed()));
+        if(oldHead.getType().equals(LocomotiveTypes.Diesel.toString())){
+            train.changeLocomotive(new Locomotive(oldHead.getYEAR_OF_ISSUE(), LocomotiveTypes.Electric.toString(), oldHead.getMaximalSpeed()));
         }
 
 

@@ -24,7 +24,7 @@ public final class CarriageWithSeats extends Wagon{
 
     @Override
     public String getType() {
-        return R_StockTypes.Сидячий.toString();
+        return R_StockTypes.Sitting.toString();
     }
 
     @Override

@@ -16,7 +16,7 @@ public final class CompartmentWagon extends Wagon {
 
     @Override
     public String typeOfComfortable() {
-        return ComfortTypes.Купе.toString();
+        return ComfortTypes.Compartment.toString();
     }
 
     @Override
@@ -26,7 +26,7 @@ public final class CompartmentWagon extends Wagon {
 
     @Override
     public String getType() {
-        return R_StockTypes.Купейный.toString();
+        return R_StockTypes.Compartment.toString();
     }
 
     @Override

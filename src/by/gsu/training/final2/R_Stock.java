@@ -13,4 +13,9 @@ public abstract class R_Stock {
     protected R_Stock(int yearOfIssue){
         this.YEAR_OF_ISSUE = yearOfIssue;
     }
+
+    @Override
+    public String toString() {
+        return "YEAR_OF_ISSUE=" + YEAR_OF_ISSUE;
+    }
 }

@@ -36,4 +36,13 @@ public abstract class Wagon extends R_Stock {
 
     public abstract String typeOfComfortable();
     public abstract void printConductors();
+
+    @Override
+    public String toString() {
+        return "Wagon{" + super.toString() +
+                " numberOfWagon=" + numberOfWagon +
+                ", countOfPlaces=" + countOfPlaces +
+                ", occupiedPlaces=" + occupiedPlaces +
+                '}';
+    }
 }

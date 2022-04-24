@@ -20,11 +20,10 @@ public final class Locomotive extends R_Stock {
 
     @Override
     public String toString() {
-        return "Locomotive{" +
-                "type='" + type + '\'' +
+        return "Locomotive{" + super.toString() +
+                " type='" + type + '\'' +
                 ", maximalSpeed=" + maximalSpeed +
-                ", YEAR_OF_ISSUE=" + YEAR_OF_ISSUE +
-                '}';
+                "}";
     }
 
     @Override

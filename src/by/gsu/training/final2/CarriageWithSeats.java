@@ -29,12 +29,8 @@ public final class CarriageWithSeats extends Wagon{
 
     @Override
     public String toString() {
-        return getType() + "{" +
-                "TYPES_OF_PLACES='" + TYPES_OF_PLACES + '\'' +
-                ", YEAR_OF_ISSUE=" + YEAR_OF_ISSUE +
-                ", numberOfWagon=" + numberOfWagon +
-                ", countOfPlaces=" + countOfPlaces +
-                ", occupiedPlaces=" + occupiedPlaces +
+        return "CarriageWithSeats{" + super.toString() +
+                ", TYPES_OF_PLACES='" + TYPES_OF_PLACES + '\'' +
                 '}';
     }
 

@@ -31,13 +31,9 @@ public final class CompartmentWagon extends Wagon {
 
     @Override
     public String toString() {
-        return getType() + "{" +
-                "placesInCompartment=" + placesInCompartment +
+        return "CompartmentWagon{" + super.toString() +
+                " placesInCompartment=" + placesInCompartment +
                 ", conductorsFIO='" + conductorsFIO + '\'' +
-                ", YEAR_OF_ISSUE=" + YEAR_OF_ISSUE +
-                ", numberOfWagon=" + numberOfWagon +
-                ", countOfPlaces=" + countOfPlaces +
-                ", occupiedPlaces=" + occupiedPlaces +
                 '}';
     }
 

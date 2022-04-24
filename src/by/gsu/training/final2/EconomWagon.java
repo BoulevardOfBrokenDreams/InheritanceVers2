@@ -28,13 +28,9 @@ public final class EconomWagon extends Wagon {
 
     @Override
     public String toString() {
-        return getType() + "{" +
-                "firstConductorFIO='" + firstConductorFIO + '\'' +
+        return "EconomWagon{" + super.toString() +
+                ", firstConductorFIO='" + firstConductorFIO + '\'' +
                 ", secondConductorFIO='" + secondConductorFIO + '\'' +
-                ", YEAR_OF_ISSUE=" + YEAR_OF_ISSUE +
-                ", numberOfWagon=" + numberOfWagon +
-                ", countOfPlaces=" + countOfPlaces +
-                ", occupiedPlaces=" + occupiedPlaces +
                 '}';
     }
 

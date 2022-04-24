@@ -5,6 +5,8 @@ public class Runner {
         //1 создать пассажирский поезд
         Locomotive head = new Locomotive(1993, LocomotiveTypes.Diesel.toString(), 100);
 
+        System.out.println(head.toString());
+        System.out.println("----------------------");
         Wagon[] rollinStock = new Wagon[4];
 
         //в конструкторах я не делал специально
